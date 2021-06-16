@@ -70,11 +70,11 @@ static int my_read_nrt_function  (struct rtdm_fd *fd, void __user *buffer, size_
     //rtdm_printk (KERN_INFO "etat obtenu dans la fct de read %d \n", etat_appuyer);
     if (etat_appuyer == 0) {
         msg = "bouton_appuye";
-        rtdm_printk (KERN_INFO "bouton appuye obtenu dans la fct de read \n");
+        //rtdm_printk (KERN_INFO "bouton appuye obtenu dans la fct de read \n");
     }
     else if (etat_appuyer == 1) {
         msg = "bouton_libre";
-        rtdm_printk (KERN_INFO "bouton libre obtenu dans la fct de read \n");
+        //rtdm_printk (KERN_INFO "bouton libre obtenu dans la fct de read \n");
     }
     if (lg > 0) {
         if (rtdm_safe_copy_to_user(fd, buffer, msg, lg) != 0) {
